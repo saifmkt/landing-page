@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background-color: #070b20;
+
+    background-image:
+        radial-gradient(#27345c 1px, transparent 1px);
+
+    background-size: 40px 40px;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 400px;
+
+    min-height: 100vh;
+
+    padding: 25px 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #060a18,
+            #02040d
+        );
+
+    border-left: 1px solid #234a91;
+    border-right: 1px solid #234a91;
+
+    box-shadow:
+        0 0 20px rgba(20, 80, 200, 0.15),
+        0 0 50px rgba(20, 80, 200, 0.08);
+
+    position: relative;
+
+    overflow: hidden;
+
+    isolation: isolate;
+}
+
+.container::before {
+    content: "";
+
+    position: absolute;
+
+    top: -120px;
+    right: -180px;
+
+    width: 300px;
+    height: 500px;
+
+    background: rgba(80, 130, 230, 0.04);
+
+    transform: rotate(30deg);
+
+    pointer-events: none;
+}
+
+.container > * {
+    position: relative;
+
+    z-index: 1;
+}
+
+.logo {
+    display: block;
+
+    width: 180px;
+
+    max-width: 80%;
+
+    margin: 0 auto 15px;
+}
+
+.brand-name {
+    text-align: center;
+
+    color: #4b8cff;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.banner {
+    width: 100%;
+
+    margin-bottom: 15px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    border: 1px solid #234a91;
+
+    box-shadow:
+        0 0 15px rgba(20, 80, 200, 0.20);
+}
+
+.banner img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    object-fit: cover;
+}
+
+/* =========================
+   STEP 6 - EFEK TOMBOL
+   ========================= */
+
+.btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 13px 20px;
+    margin: 12px 0;
+
+    background: linear-gradient(135deg, #4f8df7, #2864d7);
+    color: white;
+
+    border: none;
+    border-radius: 30px;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    box-shadow: 0 5px 15px rgba(40, 100, 215, 0.35);
+
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Efek saat mouse diarahkan ke tombol */
+.btn:hover {
+    transform: translateY(-2px);
+
+    background: linear-gradient(135deg, #6aa3ff, #3578ed);
+
+    box-shadow:
+        0 0 10px rgba(80, 140, 255, 0.6),
+        0 0 25px rgba(80, 140, 255, 0.35);
+
+    cursor: pointer;
+}
+
+/* Efek saat tombol ditekan */
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Efek cahaya berjalan */
+.btn::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.6s ease;
+}
+
+.btn:hover::before {
+    left: 150%;
+}
+
+.tabs {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    margin-bottom: 20px;
+}
+
+.tabs a {
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #27458c;
+
+    border-radius: 25px;
+
+    color: #8eb4ff;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.info {
+    padding: 14px;
+
+    border: 1px dashed #28517e;
+
+    border-radius: 8px;
+
+    color: #e4d600;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    margin-bottom: 25px;
+}
+
+footer {
+    padding-top: 18px;
+
+    border-top: 1px solid #18223f;
+
+    text-align: center;
+
+    color: #777f99;
+
+    font-size: 10px;
+}
